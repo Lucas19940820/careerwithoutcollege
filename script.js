@@ -1,12 +1,17 @@
-$(document).ready(function(){
-    /* This code is executed after the DOM has been completely loaded */
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
 
-    $('nav a,footer a.up').click(function(e){
+    // Event listener to toggle menu visibility
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active'); // Toggle menu visibility
+        hamburger.classList.toggle('active'); // Change hamburger to X icon
 
-        // If a link has been clicked, scroll the page to the link's hash target:
-
-        $.scrollTo( this.hash || 0, 1500);
-        e.preventDefault();
+        // Update the hamburger icon
+        if (hamburger.classList.contains('active')) {
+            hamburger.textContent = '✕'; // Change to X icon
+        } else {
+            hamburger.textContent = '☰'; // Change back to hamburger icon
+        }
     });
-
 });

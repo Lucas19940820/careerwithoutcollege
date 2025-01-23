@@ -1,179 +1,186 @@
-<!DOCTYPE html> <!-- The new doctype -->
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career without College Pty Ltd</title>
-
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-
-    <!-- Internet Explorer HTML5 enabling script: -->
-
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Internet Explorer HTML5 enabling script (if needed) -->
     <!--[if IE]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <style type="text/css">
-
-            .clear {
-                zoom: 1;
-                display: block;
-            }
-
-        </style>
-
     <![endif]-->
+    <style>
+         * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color:  red;
+    color: #fff;
+    line-height: 1.6;
+}
 
+/* Main container section */
+#page {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+/* Header section */
+header {
+    display: flex;
+    flex-direction: column; /* Stack logo and nav vertically */
+    align-items: flex-start; /* Align items to the left by default */
+    padding: 20px 0;
+    border-bottom: 2px solid #fff;
+    background-color: red; /* Background color for the header */
+    position: relative; /* For positioning the nav */
+}
+
+/* Navigation menu */
+nav {
+    position: absolute;
+    bottom: 10px; /* Adjust distance from the bottom of the header */
+    right: 10px; /* Align to the right */
+    background-color: red; /* Match the header background */
+    padding: 10px; /* Add padding for spacing around links */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff; /* White text for contrast */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: blue; /* Change color on hover */
+}
+
+/* Hamburger Menu Icon (hidden by default on larger screens) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: #fff;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    nav {
+        position: static; /* Positioning change */
+        padding: 0; /* Remove padding */
+    }
+    nav ul {
+        display: none; /* Hide the menu by default */
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Make the menu take up full width */
+        margin-top: 20px; /* Add space from the logo */
+        background-color: red; /* Match header background */
+        padding: 20px 0; /* Add vertical padding */
+    }
+    nav ul li {
+        margin: 10px 0; /* Add space between links */
+        text-align: center; /* Center-align links */
+    }
+    nav ul li a {
+        font-size: 18px; /* Adjust font size for readability */
+    }
+    .hamburger {
+        display: block; /* Show the hamburger icon */
+        margin-left: auto; /* Position hamburger icon on the right */
+    }
+
+    /* Show the menu when active class is added */
+    nav ul.active {
+        display: flex; /* Show the menu */
+    }
+}
+
+
+
+    </style>
 </head>
-<body>
+<body style="color:red; line-height: 1.6; padding: 20px;"> <!-- Added padding to body and improved line height -->
 
-    <section id="page"> <!-- Defining the #page section with the section tag -->
+    <section id="page" style="max-width: 1200px; margin: 0 auto;"> <!-- Added max-width for better content alignment -->
 
-    <header> <!-- Defining the header section of the page with the appropriate tag -->
+        <header>
+            <a href="index.html">
+                <img src="IMG-20210327-WA0000.jpg" alt="Career without College" class="logo">
+            </a>
+            <nav>
+                <div class="hamburger" id="hamburger">☰</div> <!-- Hamburger menu -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Commitments.html">Commitments</a></li>
+                    <li><a href="message.html">Message</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    <div class="line" style="border-top: 2px solid red; margin-bottom: 30px;"></div> <!-- Dividing line with spacing -->
 
-        <a href = "index.html"><img src ="IMG-20210327-WA0000.jpg" width= "285" height = "128"  border ="1.5px solid #FCFCFC"><img></a>
+    <article id="article1" style="margin-bottom: 40px;"> <!-- Added bottom margin to article -->
 
-        <h3 ></h3>
+        <section class="commitment-section" style="margin-bottom: 30px;"> <!-- Added bottom margin for section -->
+            <h2 class="section-heading" style="font-size: 24px; margin-bottom: 10px;">OUR STUDENTS</h2>
+            <div class="line" style="border-top: 2px solid red; margin-bottom: 20px;"></div> <!-- Added spacing around the line -->
+            <p style="color: red; margin-bottom: 20px;">We are committed to our students by providing strong curricula emphasizing practical, usable skills blended with a relevant general education foundation. This is accomplished in a caring environment with personal attention and close faculty-student interaction. We offer education opportunities, with an “open door” admission component, to a diverse array of students, including high school graduates, various companies, as well as non-traditionally prepared students.</p>
+        </section>
 
-        <nav class="clear"> <!-- The nav link semantically marks your main site navigation -->
+        <section class="commitment-section" style="margin-bottom: 30px;">
+            <h2 class="section-heading" style="font-size: 24px; margin-bottom: 10px;">OUR PROGRAMMES</h2>
+            <div class="line" style="border-top: 2px solid red; margin-bottom: 20px;"></div>
+            <p style="color: red; margin-bottom: 20px;">We are entirely committed to giving our students the highest quality education possible to obtain entry-level employment skills in the truck driving industry and provide the transport industry with quality, entry-level individuals who are able to satisfactorily complete their fleet job and contribute to their community.</p>
+        </section>
 
-            <ul>
+        <section class="commitment-section" style="margin-bottom: 30px;">
+            <h2 class="section-heading" style="font-size: 24px; margin-bottom: 10px;">OUR EMPLOYEES</h2>
+            <div class="line" style="border-top: 2px solid red; margin-bottom: 20px;"></div>
+            <p style="color: red; margin-bottom: 20px;">We are committed to high standards of performance and pride in accomplishment, with the understanding that the strength of our organization is our people. We embrace the concepts of equal opportunity, affirmative action, and cultural diversity. We encourage teamwork, professional growth, acceptance of responsibility, and recognition for achievement.</p>
+        </section>
 
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About us</a></li>
-                <li><a href="Commitments.html">Commitments</a></li>
-				<li><a href="message.html">Message</a></li>
-                <li><a href="contact.html">Contact us</a></li>
+        <section class="commitment-section" style="margin-bottom: 30px;">
+            <h2 class="section-heading" style="font-size: 24px; margin-bottom: 10px;">OUR COMMUNITIES</h2>
+            <div class="line" style="border-top: 2px solid red; margin-bottom: 20px;"></div>
+            <p style="color: red; margin-bottom: 20px;">We are committed to being good neighbors and giving our community something they can be proud of in a company. Through our training program, we strive to give our community professional, responsible, and safe Tractor-Trailer Operators to contribute to its development.</p>
+        </section>
 
-            </ul>
-
-        </nav>
-
-    </header>
-	<br>
-	<!-- Article 1 start -->
-
-    <div class="line"></div>  <!-- Dividing line -->
-
-    <article id="article1"> <!-- The new article tag. The id is supplied so it can be scrolled into view. -->
-
-         <center><u style = "color: white;"><h2 style = "color: white;">OUR STUDENTS</h2></u></center>
-
-        <div class="line"></div>
-
-        <div class="articleBody clear">
-
-           
-
-            <p style = "color: white;">
-			
-			We are committed to our students by providing strong curricula emphasizing practical, usable skills blended with a relevant general education foundation. This is accomplished in a caring environment with personal attention and close faculty‐student interaction. We offer education opportunity, with an “open door” admission component, to a diverse array of students, including high school graduates, various companies, as well as non‐traditionally prepared students.
-
-			</p>
-        </div>
-
-    
-
-        <center><u style = "color: white;"><h2 style = "color: white;">OUR PROGRAMMES</h2></u></center>
-
-        <div class="line"></div>
-
-        <div class="articleBody clear">
-
-           
-
-            <p style = "color: white;">
-			
-				
-
-			We are entirely committed to giving our students the highest quality education possible to obtain entry‐level employment skills in the truck driving industry and provide the transport industry with quality, entry‐level individuals who are able to satisfactorily complete their fleet job and contribute to their community.
-
-
-			</p>
-        </div>
-
-    
-
-        <center><u style = "color: white;"><h2 style = "color: white;">OUR EMPLOYEES</h2></u><center>
-
-        <div class="line"></div>
-
-        <div class="articleBody clear">
-
-           
-
-            <p style = "color: white;">
-			
-				
-
-				We are committed to high standards of performance and pride in accomplishment, with the understanding that the strength of our organization is our people. We embrace the concepts of equal opportunity, affirmative action and cultural diversity. We encourage teamwork, professional growth, acceptance of responsibility, and recognition for achievement.
-
-
-			</p>
-        </div>
-
-    
-
-        <center><u style = "color: white;"><h2 style = "color: white;"> OUR COMMUNITIES</h2></u></center>
-
-        <div class="line"></div>
-
-        <div class="articleBody clear">
-
-           
-
-            <p style = "color: white;">
-			
-				
-			
-
-			 We are committed to being good neighbours and giving our community something they can be proud of in a company.
-			 Through our training program we strive to give our community professional, responsible and safe Tractor‐Trailer Operators to contribute to its development.
-
-
-
-			</p>
-        </div>
-
-    
-
-       <center><u style = "color: white;"><h2 style = "color: white;"> OUR COUNTRY</h2></u></center>
-
-        <div class="line"></div>
-
-        <div class="articleBody clear">
-
-           
-
-            <p style = "color: white;">
-
-
-			 We are committed to contributing to the economic vitality of our Country by providing a well‐trained and educated work force.
-
-			</p>
-        </div>
+        <section class="commitment-section" style="margin-bottom: 30px;">
+            <h2 class="section-heading" style="font-size: 24px; margin-bottom: 10px;">OUR COUNTRY</h2>
+            <div class="line" style="border-top: 2px solid red; margin-bottom: 20px;"></div>
+            <p style="color: red; margin-bottom: 20px;">We are committed to contributing to the economic vitality of our country by providing a well-trained and educated workforce.</p>
+        </section>
 
     </article>
 
-    <!-- Article 1 end -->
-	 <footer> <!-- Marking the footer section -->
+    <footer style="margin-top: 40px; text-align: center;"> <!-- Added top margin and centered text -->
+        <div class="line" style="border-top: 2px solid red; margin-bottom: 20px;"></div>
+        <p>Copyright 2021 - Career without College Pty Ltd</p>
+    </footer>
 
-            <div class="line"></div>
-
-            <p style ="">Copyright 2021 - Career without College Pty Ltd</p> <!-- Change the copyright notice -->
-            
-            
-
-        </footer>
-
-    </section> <!-- Closing the #page section -->
-
-    <!-- JavaScript Includes -->
+    </section> <!-- End of the page section -->
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
     <script src="jquery.scrollTo-1.4.2/jquery.scrollTo-min.js"></script>
     <script src="script.js"></script>
 
-    </body>
-
+</body>
 </html>
