@@ -248,7 +248,18 @@ a:hover {
 
     <!-- JavaScript Includes -->
    
-    <script src="script.js"></script>
+    <script>
+        // Get references to the hamburger icon and navigation menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.querySelector('.nav-links');
+    
+        // Add click event listener to the hamburger icon
+        hamburger.addEventListener('click', () => {
+            // Toggle the 'active' class on the navigation menu
+            navLinks.classList.toggle('active');
+        });
+    </script>
+    
 
 </body>
 </html>
