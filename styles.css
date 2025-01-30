@@ -9,31 +9,37 @@
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
-    background-color: #e66c6c;
-    color: red;
+    background-color: #f8f9fa; /* Light gray background */
+    color: #333; /* Dark gray text for better readability */
 }
 
 /* Header Styles */
 header {
     text-align: center;
     padding: 20px;
-    background-color: red;
+    background-color: #dc3545; /* Modern red */
     color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 header a img {
     max-width: 200px;
     margin-bottom: 10px;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+header a img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
 }
 
 /* Navigation Styles */
 nav ul {
     display: flex;
     justify-content: center;
-    background-color: red;
+    background-color: #dc3545; /* Modern red */
     padding: 10px;
     list-style-type: none;
-    
+    margin: 0;
 }
 
 nav ul li {
@@ -43,56 +49,106 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    border-right: solid white;
-    padding-right: 10px;
+    padding: 10px 15px;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+    color: #fff;
 }
 
 /* Main Content Styles */
 article {
     padding: 20px;
     background-color: white;
-    max-width: 100%;
+    max-width: 1200px;
     margin: 20px auto;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 article h2 {
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 20px;
+    color: #dc3545; /* Modern red */
+    text-align: center;
 }
 
 article figure {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    gap: 10px; /* Space between images */
 }
 
 article figure img {
     max-width: 20%;
     height: auto;
-    margin-right: 10px;
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+article figure img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
 }
 
 /* Footer Styles */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: red;
+    background-color: #dc3545; /* Modern red */
     color: white;
     font-weight: bold;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 footer a {
     color: white;
     text-decoration: none;
+    transition: opacity 0.3s ease; /* Smooth hover effect */
+}
+
+footer a:hover {
+    opacity: 0.8; /* Slight fade on hover */
 }
 
 footer p {
     margin-top: 10px;
 }
+
 /* Contact Item Image Styling */
 .contact-item img.icon {
-    width: 30px; /* Adjust width as needed */
-    height: 30px; /* Adjust height to match width for square images */
-    object-fit: contain; /* Ensures the image maintains its aspect ratio */
-    margin-right: 10px; /* Spacing between the image and text */
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin-right: 10px;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.contact-item img.icon:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add space between stacked items */
+    }
+
+    article figure {
+        flex-direction: column; /* Stack images vertically */
+        align-items: center;
+    }
+
+    article figure img {
+        max-width: 80%; /* Larger images on smaller screens */
+        margin-bottom: 10px;
+    }
 }
