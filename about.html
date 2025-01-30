@@ -14,77 +14,73 @@
     <![endif]-->
 	<style>
         * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
 body {
-    font-family: 'Open Sans', sans-serif;
-    background-color:  red;
-    color: #fff;
-    line-height: 1.6;
-    
+   font-family: 'Open Sans', sans-serif;
+   background-color:  red;
+   color: #fff;
+   line-height: 1.6;
 }
 
 /* Main container section */
 #page {
-    margin: 0 auto;
-    padding: 20px;
-    max-width: 1200px;
+   margin: 0 auto;
+   padding: 20px;
+   max-width: 1200px;
 }
 
 /* Header section */
 header {
-    display: flex;
-    flex-direction: column; /* Stack logo and nav vertically */
-    align-items: flex-start; /* Align items to the left by default */
-    padding: 20px 0;
-    border-bottom: 2px solid #fff;
-    background-color: red; /* Background color for the header */
-    position: relative; /* For positioning the nav */
+   display: flex;
+   flex-direction: column; /* Stack logo and nav vertically */
+   align-items: flex-start; /* Align items to the left by default */
+   padding: 20px 0;
+   border-bottom: 2px solid #fff;
+   background-color: red; /* Background color for the header */
+   position: relative; /* For positioning the nav */
 }
 
 /* Navigation menu */
 nav {
-    position: absolute;
-    bottom: 10px; /* Adjust distance from the bottom of the header */
-    right: 10px; /* Align to the right */
-    background-color: red; /* Match the header background */
-    padding: 10px; /* Add padding for spacing around links */
-    border-radius: 5px; /* Optional: rounded corners */
+   position: absolute;
+   bottom: 10px; /* Adjust distance from the bottom of the header */
+   right: 10px; /* Align to the right */
+   background-color: red; /* Match the header background */
+   padding: 10px; /* Add padding for spacing around links */
+   border-radius: 5px; /* Optional: rounded corners */
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+   display: flex;
+   list-style: none;
+   margin: 0;
+   padding: 0;
 }
 
 nav ul li {
-    margin-right: 20px;
+   margin-right: 20px;
 }
 
 nav ul li a {
-    color: #fff; /* White text for contrast */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
+   color: #fff; /* White text for contrast */
+   text-decoration: none;
+   font-weight: bold;
+   font-size: 16px;
 }
 
 nav ul li a:hover {
-    color: blue; /* Change color on hover */
+   color: blue; /* Change color on hover */
 }
 
 /* Hamburger Menu Icon (hidden by default on larger screens) */
 .hamburger {
-    display: none;
-    cursor: pointer;
-    font-size: 30px;
-    color: #fff;
-}
-a:hover {
-    color:red;
+   display: none;
+   cursor: pointer;
+   font-size: 30px;
+   color: #fff;
 }
 
 /* Media Query for smaller screens */
@@ -92,6 +88,7 @@ a:hover {
     nav {
         position: static; /* Positioning change */
         padding: 0; /* Remove padding */
+        width: 100%; /* Ensure nav takes full width */
     }
     nav ul {
         display: none; /* Hide the menu by default */
@@ -111,6 +108,7 @@ a:hover {
     .hamburger {
         display: block; /* Show the hamburger icon */
         margin-left: auto; /* Position hamburger icon on the right */
+        cursor: pointer; /* Ensure it looks clickable */
     }
 
     /* Show the menu when active class is added */
@@ -120,7 +118,7 @@ a:hover {
 }
 
 
-    </style>
+   </style>
 </head>
 <body>
     <section id="page"> <!-- Defining the #page section with the section tag -->
@@ -248,18 +246,7 @@ a:hover {
 
     <!-- JavaScript Includes -->
    
-    <script>
-        // Get references to the hamburger icon and navigation menu
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.querySelector('.nav-links');
-    
-        // Add click event listener to the hamburger icon
-        hamburger.addEventListener('click', () => {
-            // Toggle the 'active' class on the navigation menu
-            navLinks.classList.toggle('active');
-        });
-    </script>
-    
+    <script src="script.js"></script>
 
 </body>
 </html>
